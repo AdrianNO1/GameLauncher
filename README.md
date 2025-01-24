@@ -11,6 +11,7 @@ A minimalist game launcher focused on functionality and performance, and totally
 - Automatic game detection
 - Built-in tea timer (because good games require good tea)
 - Windows startup integration
+- Always runs in the background
 - Seamless SendTo menu integration
 
 ## Why This Launcher?
