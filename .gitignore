@@ -1,0 +1,7 @@
+__pycache__/
+game_images/
+games.json
+history.json
+steam_id_cache.json
+test.py
+placeholder_icon.jpg

@@ -1,0 +1,94 @@
+QMainWindow, QWidget {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+QTreeWidget {
+    background-color: #2d2d2d;
+    border: none;
+    border-radius: 5px;
+}
+
+QTreeWidget::item {
+    padding: 5px;
+}
+
+QTreeWidget::item:selected {
+    background-color: #404040;
+    border: none;
+    outline: none;
+}
+
+QTreeWidget::item:focus {
+    border: none;
+    outline: none;
+}
+
+QTreeWidget::branch:selected {
+    background-color: #404040;
+}
+
+QTreeWidget::item[running="true"] {
+    color: #007acc;
+}
+
+QLineEdit {
+    background-color: #2d2d2d;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    color: white;
+}
+
+QPushButton {
+    background-color: #007acc;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #0088e2;
+}
+
+QLabel {
+    color: #ffffff;
+}
+
+QLabel#gameTitle {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+QLabel#gameInfo {
+    font-size: 18px;
+    color: #cccccc;
+    margin: 5px 0;
+}
+
+QPushButton#launchButton {
+    font-size: 20px;
+    background-color: #2ecc71;
+    padding: 0;
+    margin-top: 15px;
+}
+
+QPushButton#launchButton:hover {
+    background-color: #27ae60;
+}
+
+QPushButton#stopButton {
+    background-color: #007acc;
+    font-size: 20px;
+    padding: 0;
+    margin-top: 15px;
+}
+
+QPushButton#stopButton:hover {
+    background-color: #0088e2;
+}
