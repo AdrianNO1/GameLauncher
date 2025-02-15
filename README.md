@@ -1,7 +1,7 @@
 # Game Launcher
 
 A minimalist game launcher focused on functionality and performance, and totally not piracy.
-
+![image](https://github.com/user-attachments/assets/a58c0edb-236e-47eb-ad85-1f9d1c48b0d2)
 ## Features
 
 - Clean and efficient game management
@@ -11,6 +11,7 @@ A minimalist game launcher focused on functionality and performance, and totally
 - Automatic game detection
 - Built-in tea timer (because good games require good tea)
 - Windows startup integration
+- Always runs in the background
 - Seamless SendTo menu integration
 
 ## Why This Launcher?
@@ -32,7 +33,6 @@ Designed with a few core principles:
    pip install PyQt6 pynput pygame
    ```
 3. Run `launcher.pyw`
-4. 
 
 ## Usage
 
@@ -50,6 +50,7 @@ Designed with a few core principles:
   - Restart launcher
   - Tea
 
+![image](https://github.com/user-attachments/assets/03538297-5e02-4a43-a149-ec9ed4047a56)
 ## Technical Details
 
 - Written in Python with PyQt6
@@ -57,5 +58,3 @@ Designed with a few core principles:
 - Utilizes Steam API for game banner image (no API key required)
 - Local JSON storage for game data
 - Multi-process monitoring system to track playtime
-
-## Screenshots
