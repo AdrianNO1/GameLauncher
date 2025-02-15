@@ -276,6 +276,8 @@ class GameLauncher(QMainWindow):
         
         self.new_game_signal.connect(self.handle_new_game)
 
+        QTimer.singleShot(0, self.check_running_games)
+
         self.start_socket_server()
     
     def check_running_games(self):
@@ -306,7 +308,7 @@ class GameLauncher(QMainWindow):
 
     def run_socket_server(self):
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server.bind(("localhost", 12345))
+        server.bind(("localhost", 25537))
         server.listen(1)
 
         while True:
@@ -327,7 +329,7 @@ class GameLauncher(QMainWindow):
             "exe_path": message["exe_path"],
             "categories": [],
             "playtime": 0,
-            "last_played": datetime.now().isoformat(),
+            "last_played": None,
             "steam_id": None,
             "image_path": None
         }
@@ -412,7 +414,7 @@ class GameLauncher(QMainWindow):
                         playtime_hours = round(elapsed_seconds / 3600, 1)
                         if playtime_hours.is_integer():
                             playtime_hours = int(playtime_hours)
-                        widget.setText(f"Playtime: {playtime_hours} hours")
+                        widget.setText(f"Playtime: {playtime_hours} hour" + ("s" if playtime_hours != 1 else ""))
                         break
 
     def on_game_closed(self, game_name):

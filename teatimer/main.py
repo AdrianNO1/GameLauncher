@@ -102,6 +102,8 @@ class TransparentWindow(QtWidgets.QMainWindow):
         self.countdown_timer.stop()
         self.close_button.setText('Close')
         self.is_alarming = True
+        self.make_click_through(False)
+        self.setWindowOpacity(1)
         self.flash_timer.start(500)
         self.play_alarm()
 
@@ -143,7 +145,7 @@ class TransparentWindow(QtWidgets.QMainWindow):
             self.setWindowOpacity(1)
 
     def on_release(self, key):
-        if key == keyboard.Key.alt_l:
+        if key == keyboard.Key.alt_l and not self.is_alarming:
             self.altAlreadyPressed = False
             self.make_click_through(True)
             self.setWindowOpacity(self.default_opacity)
